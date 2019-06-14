@@ -35,13 +35,13 @@ class RingBuffer:
      #and return the array of items which will not contain "None"   
     return items
 
-# ring_buffer = RingBuffer(3)
+ring_buffer = RingBuffer(3)
 
-# ring_buffer.append('a')
-# ring_buffer.append('b')
+ring_buffer.append('a')
+ring_buffer.append('b')
 # ring_buffer.append('c')
 # ring_buffer.append('d')
-# print(ring_buffer.storage)
-# print(ring_buffer.current)
-# print(ring_buffer.capacity)
-# print(ring_buffer.get())
+print(ring_buffer.storage)
+print(ring_buffer.current)
+print(ring_buffer.capacity)
+print(ring_buffer.get())
