@@ -8,20 +8,31 @@ class RingBuffer:
     self.storage = [None]*capacity
 
   def append(self, item):
+    #if current is not equal to capacity
     if self.current != self.capacity:
+      #then set storage[current] equal to item
       self.storage[self.current] = item 
+      #then increment current by 1
       self.current += 1
     else:
+      #current = 0
       self.current = 0
+      #then append item 
       self.append(item)
 
   def get(self):
+    #create empty item list
     items = []
+    #for every item in storage
     for item in self.storage:
+      #if the item is not equal to None
       if item != None:
+        #then append the item to the items list
         items.append(item)
       else:
+        #break out of the for loop 
         break
+     #and return the array of items which will not contain "None"   
     return items
 
 # ring_buffer = RingBuffer(3)
